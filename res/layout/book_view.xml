@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF5F5F5"
+    android:orientation="vertical" >
+
+    <include layout="@layout/titlebar3" />
+
+    <ScrollView
+        android:id="@+id/subject_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:background="#FFF5F5F5"
+        android:padding="10dip"
+        android:scrollbars="none" >
+
+        <RelativeLayout
+            android:id="@+id/section1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/content_bg"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bookInfo" />
+
+            <RelativeLayout
+                android:id="@+id/wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtInfo"
+                android:paddingTop="10dip" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/book_img"
+                        android:layout_width="100dip"
+                        android:layout_height="140dip" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                         >
+
+                        <TextView
+                            android:id="@+id/book_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dip"
+                            android:textColor="@color/black"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/book_description"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dip"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="5dip" >
+
+                            <TextView
+                                android:id="@+id/book_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#00f"
+                                android:textSize="18sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <RatingBar
+                                android:id="@+id/ratingbar"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:paddingTop="10dip"
+                                android:stepSize="0.5"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnShowComment1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dip"
+                    android:background="@drawable/wp_button"
+                    android:text="@string/btnShowComment"
+                    android:textSize="18dp"
+                    android:visibility="invisible"
+                    android:width="150dip" >
+                </Button>
+
+                <TextView
+                    android:id="@+id/book_summary"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@id/btnShowComment1"
+                    android:paddingBottom="10dip"
+                    android:paddingTop="10dip"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <Button
+                    android:id="@+id/btnShowComment2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/book_summary"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/wp_button"
+                    android:text="@string/btnShowComment"
+                    android:textSize="18dp"
+                    android:visibility="invisible"
+                    android:width="150dip" >
+                </Button>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/book_toolbar"
+        style="@android:style/ButtonBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_book_new_review"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/new_review" />
+
+        <Button
+            android:id="@+id/btn_book_wish"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book_wish" />
+
+        <Button
+            android:id="@+id/btn_book_reading"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book_reading" />
+
+        <Button
+            android:id="@+id/btn_book_read"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/book_read" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/music_toolbar"
+        style="@android:style/ButtonBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_music_new_review"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/new_review" />
+
+        <Button
+            android:id="@+id/btn_music_wish"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/music_wish" />
+
+        <Button
+            android:id="@+id/btn_music_listening"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/music_listening" />
+
+        <Button
+            android:id="@+id/btn_music_listened"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/music_listened" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/movie_toolbar"
+        style="@android:style/ButtonBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/btn_movie_new_review"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/new_review" />
+
+        <Button
+            android:id="@+id/btn_movie_wish"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/movie_wish" />
+
+        <Button
+            android:id="@+id/btn_movie_watched"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/movie_watched" />
+    </LinearLayout>
+
+</LinearLayout>

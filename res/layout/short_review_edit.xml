@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/settings"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF5F5F5"
+    android:scrollbars="none" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF5F5F5"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:scrollbars="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/section1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/content_bg" >
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/collect_info" />
+
+            <RelativeLayout
+                android:id="@+id/wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l_section1"
+                android:paddingTop="30dip" >
+
+                <TextView
+                    android:id="@+id/txtCollectionTip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxHeight="40dip"
+                    android:paddingBottom="15dip"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/EdtReviewTags"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtCollectionTip"
+                    android:background="@android:drawable/editbox_background"
+                    android:hint="@string/review_tags"
+                    android:minHeight="40dip"
+                    android:text="" >
+                </EditText>
+
+                <RatingBar
+                    android:id="@+id/ratingbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EdtReviewTags"
+                    android:layout_marginLeft="5dip"
+                    android:numStars="5"
+                    android:paddingBottom="5dip"
+                    android:paddingTop="5dip"
+                    android:stepSize="1" />
+
+                <EditText
+                    android:id="@+id/EdtReviewContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dip"
+                    android:layout_below="@id/ratingbar"
+                    android:background="@android:drawable/editbox_background"
+                    android:gravity="top"
+                    android:hint="@string/review_short_content"
+                    android:text="" >
+                </EditText>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EdtReviewContent"
+                    android:gravity="center"
+                    android:paddingTop="10dip" >
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wp_button_small"
+                        android:text="@string/btnSave"
+                        android:width="100dp" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wp_button_small"
+                        android:text="@string/btnCancel"
+                        android:width="100dp" >
+                    </Button>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>

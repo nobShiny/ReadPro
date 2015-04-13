@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF5F5F5"
+    android:orientation="vertical" >
+
+    <ViewFlipper
+        android:id="@+id/flipper"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:flipInterval="1000"
+        android:inAnimation="@anim/push_left_in"
+        android:outAnimation="@anim/push_right_out"
+        android:persistentDrawingCache="animation" >
+
+        <include
+            android:id="@+id/search_book"
+            layout="@layout/search_content" />
+
+        <include
+            android:id="@+id/search_movie"
+            layout="@layout/search_content" />
+
+        <include
+            android:id="@+id/search_music"
+            layout="@layout/search_content" />
+    </ViewFlipper>
+
+</LinearLayout>

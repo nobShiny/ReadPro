@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_login"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF5F5F5"
+    android:scrollbars="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/inner_login"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF5F5F5"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip" >
+
+        <ImageView
+            android:id="@+id/doubanLogo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingBottom="10dip"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:paddingTop="10dip"
+            android:scaleType="centerInside"
+            android:src="@drawable/douban_logo" >
+        </ImageView>
+
+        <RelativeLayout
+            android:id="@+id/section1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/doubanLogo"
+            android:background="@drawable/content_bg"
+            android:paddingTop="5dip" >
+
+            <TextView
+                android:id="@+id/l_section1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_login" />
+
+            <RelativeLayout
+                android:id="@+id/wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l_section1" >
+
+                <EditText
+                    android:id="@+id/EditTextEmail"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:hint="@string/email"
+                    android:minHeight="40dip"
+                    android:text="496749946@qq.com" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/EditTextPassword"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EditTextEmail"
+                    android:hint="@string/password"
+                    android:minHeight="40dip"
+                    android:password="true"
+                    android:text="496749946" >
+                </EditText>
+
+                <LinearLayout
+                    android:id="@+id/Captcha"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EditTextPassword"
+                    android:gravity="center"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/EditTextCaptchaValue"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:hint="@string/captcha"
+                        android:minHeight="40dip"
+                        android:text="" >
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/ImageViewCaptcha"
+                        android:layout_width="120dip"
+                        android:layout_height="30dip"
+                        android:layout_below="@id/EditTextCaptchaValue"
+                        android:adjustViewBounds="false"
+                        android:scaleType="fitXY" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Captcha"
+                    android:gravity="center"
+                    android:paddingBottom="30dip"
+                    android:paddingTop="30dip" >
+
+                    <Button
+                        android:id="@+id/btnLogin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wp_button_small"
+                        android:text="@string/btnLogin"
+                        android:width="100dp" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnExit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wp_button_small"
+                        android:text="@string/btnExit"
+                        android:width="100dp" >
+                    </Button>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</ScrollView>
