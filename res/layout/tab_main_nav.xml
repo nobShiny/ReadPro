@@ -3,7 +3,7 @@
     android:id="@+id/tabMainNav"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/tab_main_nav_fav_selector"
+    android:background="@drawable/tab_main_nav_selector"
     android:gravity="center_horizontal"
     android:orientation="vertical" >
 

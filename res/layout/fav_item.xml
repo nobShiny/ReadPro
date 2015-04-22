@@ -7,12 +7,17 @@
     android:gravity="center_vertical"
     android:orientation="horizontal" >
 
+    <ImageView 
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/mb_note"
+        />
     <TextView
         android:id="@+id/fav_title"
         android:layout_width="0.0dip"
         android:layout_height="wrap_content"
         android:layout_weight="1.0"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="10dp"
         android:ellipsize="marquee"
         android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@color/black" />
@@ -21,7 +26,7 @@
         android:id="@+id/director_icon"
         android:layout_width="10dp"
         android:layout_height="40dp"
-        android:layout_marginRight="35dp"
+        android:layout_marginRight="20dp"
         android:src="@drawable/director_icon" />
 
 </LinearLayout>

@@ -47,9 +47,8 @@ import com.google.gdata.data.douban.UserEntry;
 
 /**
  * фюбшап╠М
- * 
- * @author chenyc
- * 
+ * @author Administrator
+ *
  */
 public class ReviewActivity extends BaseListActivity {
 

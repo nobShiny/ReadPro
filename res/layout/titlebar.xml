@@ -12,7 +12,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/readpro_logo" />
+            android:src="@drawable/readpro_logo_130" />
 
         <LinearLayout
             android:layout_width="0.0dip"

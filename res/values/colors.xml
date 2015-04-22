@@ -46,5 +46,10 @@
     <color name="holo_blue_dark">#ff0099cc</color>
     <color name="holo_orange_dark">#ffff8800</color>
     <color name="dialog_text_hint">#ffb0b0b0</color>
+    
+     <color name="grey">#FFc0c0c0</color>
+    <color name="pink">#FFFF1493</color>
+    <color name="themecolor">#00b7ee</color>
+    <color name="green">#00BFFF</color>
 
 </resources>

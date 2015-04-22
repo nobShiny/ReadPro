@@ -30,6 +30,8 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 
 public class ReadLoadingActivity extends Activity{
 
@@ -38,8 +40,9 @@ public class ReadLoadingActivity extends Activity{
 	private boolean isLogin;
 	private SharedPreferences sp;
 	private Editor editor;
+	private Animation animation;
 //	private Reserver reserver;
-//	private List<PackageInfo> packageInfos;
+	private List<PackageInfo> packageInfos;
 //	private boolean isOK;
 	
 	@Override
@@ -73,23 +76,21 @@ public class ReadLoadingActivity extends Activity{
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_read_loading);
 		loadingGif = (GifView) findViewById(R.id.loding_gif);
-	    // 设置Gif图片源 
-		loadingGif.setGifImage(R.drawable.loading_gif);      
-	    // 设置显示的大小，拉伸或者压缩 
-		bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.loading_gif);
-		loadingGif.setShowDimension(bitmap.getWidth(), bitmap.getHeight());
-	    // 设置加载方式：先加载后显示、边加载边显示、只显示第一帧再显示 
-	    loadingGif.setGifImageType(GifImageType.COVER); 
-	    
-	    
-		
-//		imageView.setAnimation(animation);
-//		if (!isLogin()) {
+//	    setGif(); 
+//	    if (!isLogin()) {
 //			new AsyncSetApprove().execute();
 //			isLogin = false;
 //		} else {
 //			isLogin = true;
 //		}
+//	    loadingGif.setAnimation(animation);
+		if (!isLogin()) {
+			new AsyncSetApprove().execute();
+			isLogin = false;
+		} else {
+			isLogin = true;
+			handler.sendEmptyMessage(2);
+		}
 //		animation.setAnimationListener(new AnimationListener() {
 //			@Override
 //			public void onAnimationStart(Animation arg0) {
@@ -102,11 +103,20 @@ public class ReadLoadingActivity extends Activity{
 //
 //			@Override
 //			public void onAnimationEnd(Animation arg0) {
-//				isOK = true;
 //				handler.sendEmptyMessage(2);
 //			}
 //		});
 	}
+//
+//	private void setGif() {
+//		// 设置Gif图片源 
+//		loadingGif.setGifImage(R.drawable.loading_gif);      
+//	    // 设置显示的大小，拉伸或者压缩 
+//		bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.loading_gif);
+//		loadingGif.setShowDimension(bitmap.getWidth(), bitmap.getHeight());
+//	    // 设置加载方式：先加载后显示、边加载边显示、只显示第一帧再显示 
+//	    loadingGif.setGifImageType(GifImageType.COVER);
+//	}
 
 	private boolean isLogin() {
 		sp = getSharedPreferences("mark", MODE_PRIVATE);
@@ -184,9 +194,9 @@ public class ReadLoadingActivity extends Activity{
 						db.execSQL(sql1);
 					}
 				} catch (SQLException e) {
-					Log.e("hck", "setApprove SQLException", e);
+					Log.e("shiny", "setApprove SQLException", e);
 				} catch (Exception e) {
-					Log.e("hck", "setApprove Exception", e);
+					Log.e("shiny", "setApprove Exception", e);
 				}
 			}
 			db.close();
@@ -212,35 +222,35 @@ public class ReadLoadingActivity extends Activity{
 //		}
 //	}
 
-//	private void getInfo() {
-//
-//		// 获取系统内的所有程序信息
-//		Intent mainintent = new Intent(Intent.ACTION_MAIN, null);
-//		mainintent.addCategory(Intent.CATEGORY_LAUNCHER);
-//		packageInfos = getApplicationContext().getPackageManager()
-//				.getInstalledPackages(0);
-//
-//		int count = packageInfos.size();
-//		for (int i = 0; i < count; i++) {
-//
-//			PackageInfo pinfo = packageInfos.get(i);
-//			ApplicationInfo appInfo = pinfo.applicationInfo;
-//			if ((appInfo.flags & ApplicationInfo.FLAG_SYSTEM) > 0) {
-//				// 系统程序 忽略
-//			} else {
-//				Log.i("hck", "page:" + pinfo.applicationInfo.packageName);
-//				if (pinfo.applicationInfo.packageName
-//						.equals("com.snda.tts.service")) {
-//					FinalDate.isTrue = true;
-//					return;
-//				} else {
-//					FinalDate.isTrue = false;
-//
-//				}
-//			}
-//		}
-//
-//	}
+	private void getInfo() {
+
+		// 获取系统内的所有程序信息
+		Intent mainintent = new Intent(Intent.ACTION_MAIN, null);
+		mainintent.addCategory(Intent.CATEGORY_LAUNCHER);
+		packageInfos = getApplicationContext().getPackageManager()
+				.getInstalledPackages(0);
+
+		int count = packageInfos.size();
+		for (int i = 0; i < count; i++) {
+
+			PackageInfo pinfo = packageInfos.get(i);
+			ApplicationInfo appInfo = pinfo.applicationInfo;
+			if ((appInfo.flags & ApplicationInfo.FLAG_SYSTEM) > 0) {
+				// 系统程序 忽略
+			} else {
+				Log.i("shiny", "page:" + pinfo.applicationInfo.packageName);
+				if (pinfo.applicationInfo.packageName
+						.equals("com.snda.tts.service")) {
+					FinalDate.isTrue = true;
+					return;
+				} else {
+					FinalDate.isTrue = false;
+
+				}
+			}
+		}
+
+	}
 
 	
 }

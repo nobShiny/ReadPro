@@ -17,14 +17,12 @@
 
         <ImageView
             android:id="@+id/doubanLogo"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingBottom="10dip"
-            android:paddingLeft="20dip"
-            android:paddingRight="20dip"
-            android:paddingTop="10dip"
-            android:scaleType="centerInside"
+            android:layout_width="336dp"
+            android:layout_height="251dp"
+            android:paddingBottom="1dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="2dip"
             android:src="@drawable/douban_logo" >
         </ImageView>
 
@@ -33,13 +31,18 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_below="@id/doubanLogo"
-            android:background="@drawable/content_bg"
-            android:paddingTop="5dip" >
+            android:background="@drawable/content_bg1"
+            android:paddingTop="5dp" >
 
             <TextView
                 android:id="@+id/l_section1"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/grey"
+                android:gravity="center_horizontal|bottom"
+                android:textColorHighlight="@color/black"
+                android:textSize="20sp"
                 android:text="@string/user_login" />
 
             <RelativeLayout
@@ -50,19 +53,22 @@
 
                 <EditText
                     android:id="@+id/EditTextEmail"
-                    android:layout_width="fill_parent"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:background="@android:drawable/editbox_background"
                     android:hint="@string/email"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="17dp"
                     android:minHeight="40dip"
                     android:text="496749946@qq.com" >
                 </EditText>
 
                 <EditText
                     android:id="@+id/EditTextPassword"
-                    android:layout_width="fill_parent"
+                    android:layout_width="260dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/EditTextEmail"
+                    android:layout_marginLeft="17dp"
                     android:hint="@string/password"
                     android:minHeight="40dip"
                     android:password="true"

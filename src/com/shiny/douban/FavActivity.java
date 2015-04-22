@@ -74,33 +74,24 @@ public class FavActivity extends BaseListActivity {
 			i.putExtra("cat", cat);
 			startActivity(i);
 			break;
-//		case 1:
-//			cat = Subject.MOVIE;
-//			i.putExtra("cat", cat);
-//			startActivity(i);
-//			break;
-		case 2:
+		case 1:
 			cat = Subject.MUSIC;
 			i.putExtra("cat", cat);
 			startActivity(i);
 			break;
-		case 3:
+		case 2:
 			i = new Intent(this, ReviewActivity.class);
 			i.putExtra("my_review", true);
 			startActivity(i);
 			break;
-		case 4:
+		case 3:
 			i = new Intent(this, NoteActivity.class);
 			startActivity(i);
 			break;
-		case 5:
+		case 4:
 			i = new Intent(this, MeActivity.class);
 			startActivity(i);
 			break;
-//		case 6:
-//			i = new Intent(this, GroupActivity.class);
-//			startActivity(i);
-//			break;
 		default:
 			break;
 		}

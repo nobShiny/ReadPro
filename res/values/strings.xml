@@ -61,7 +61,7 @@
 	<string name="menu_delete_collection">删除收藏</string>
 	<string name="tab_main_nav_newbook">新书</string>
 	<string name="tab_main_nav_comment">书评</string>
-	<string name="tab_main_nav_about">关于</string>
+	<string name="tab_main_nav_about">阅听</string>
 	<string name="about_title">关于我的豆瓣</string>
 	<string name="read_listen">阅听</string>
 	<string name="read_books">我要读</string>

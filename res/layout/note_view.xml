@@ -6,7 +6,7 @@
 
 	<RelativeLayout android:layout_width="fill_parent"
 		android:paddingTop="5dip" android:layout_height="fill_parent"
-		android:background="@drawable/content_bg" android:id="@+id/section1">
+		android:background="@drawable/content_bg1" android:id="@+id/section1">
 
 		<TextView android:id="@+id/txtTitle" android:layout_width="fill_parent"
 			android:text="@string/noteInfo" android:layout_height="wrap_content" />
