@@ -1,51 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/settings" android:layout_width="fill_parent"
-	android:layout_height="fill_parent" android:scrollbars="none"
-	android:background="#FFF5F5F5">
-	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_width="fill_parent" android:layout_height="wrap_content"
-		android:paddingLeft="10dip" android:paddingRight="10dip"
-		android:paddingTop="10dip" android:paddingBottom="10dip"
-		android:scrollbars="vertical" android:background="#FFF5F5F5">
-		<RelativeLayout android:layout_width="fill_parent"
-			android:layout_height="fill_parent" android:background="@drawable/content_bg1"
-			android:id="@+id/section1">
+    android:id="@+id/settings"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFF5F5F5"
+    android:scrollbars="none" >
 
-			<TextView android:id="@+id/txtTitle" android:layout_width="fill_parent"
-				android:text="@string/noteInfo" android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF5F5F5"
+        android:paddingBottom="10dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="10dip"
+        android:scrollbars="vertical" >
 
-			<RelativeLayout android:layout_width="wrap_content"
-				android:paddingTop="30dip" android:layout_below="@id/l_section1"
-				android:layout_height="wrap_content" android:id="@+id/wrapper">
+        <RelativeLayout
+            android:id="@+id/section1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/content_bg1" >
 
-				<EditText android:text="" android:id="@+id/EditTextTitle" 
-					android:hint="@string/noteTitle" android:layout_width="fill_parent"
-					android:layout_height="wrap_content" android:minHeight="40dip"
-					android:background="@android:drawable/editbox_background"
-					android:layout_below="@id/wrapper"></EditText>
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/noteInfo" />
 
-				<EditText android:text="" android:id="@+id/EditTextContent"
-					android:gravity="top" android:layout_width="fill_parent"
-					android:layout_height="250dip" android:hint="@string/noteContent"
-					android:background="@android:drawable/editbox_background"
-					android:layout_below="@id/EditTextTitle"></EditText>
+            <RelativeLayout
+                android:id="@+id/wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/l_section1"
+                android:paddingTop="30dip" >
 
-				<LinearLayout android:layout_width="fill_parent"
-					android:paddingTop="10dip" android:gravity="center"
-					android:layout_below="@id/EditTextContent" android:layout_height="wrap_content">
-					<Button android:text="@string/btnSave" android:id="@+id/btnSave"
-						android:width="100dp" android:layout_width="wrap_content"
-						android:background="@drawable/wp_button_small"
-						android:layout_height="wrap_content"></Button>
+                <EditText
+                    android:id="@+id/EditTextTitle"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:hint="@string/noteTitle"
+                    android:minHeight="40dip"
+                    android:text="" >
+                </EditText>
 
-					<Button android:text="@string/btnCancel" android:id="@+id/btnCancel"
-						android:background="@drawable/wp_button_small" android:width="100dp"
-						android:layout_width="wrap_content" android:layout_height="wrap_content"></Button>
-				</LinearLayout>
+                <EditText
+                    android:id="@+id/EditTextContent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="250dip"
+                    android:layout_below="@id/EditTextTitle"
+                    android:background="@android:drawable/editbox_background"
+                    android:gravity="top"
+                    android:hint="@string/noteContent"
+                    android:text="" >
+                </EditText>
 
-			</RelativeLayout>
-		</RelativeLayout>
-	</RelativeLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EditTextContent"
+                    android:gravity="center"
+                    android:paddingTop="10dip" >
+
+                    <Button
+                        android:id="@+id/btnSave"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wp_button_small"
+                        android:text="@string/btnSave"
+                        android:width="100dp" >
+                    </Button>
+
+                    <Button
+                        android:id="@+id/btnCancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/wp_button_small"
+                        android:text="@string/btnCancel"
+                        android:width="100dp" >
+                    </Button>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
 </ScrollView>
-

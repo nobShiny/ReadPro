@@ -3,7 +3,7 @@
     android:id="@+id/layout_books"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFF5F5F5"
+    android:background="@drawable/sub_bg"
     android:orientation="vertical"
     android:padding="0px" >
 

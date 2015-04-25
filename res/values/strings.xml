@@ -56,7 +56,6 @@
 	<string name="review_title">评论标题</string>
 	<string name="review_content">评论内容</string>
 	<string name="review_tags">标签(多个以空格分隔)</string>
-	<string name="review_short_content">简短附注,暂时没用，请无视！</string>
 	<string name="collect_info">收藏</string>
 	<string name="menu_delete_collection">删除收藏</string>
 	<string name="tab_main_nav_newbook">新书</string>

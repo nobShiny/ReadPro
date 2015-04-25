@@ -35,7 +35,7 @@ public class AboutActivity extends BaseActivity {
 			
 			@Override
 			public void onClick(View v) {
-				intent = new Intent(AboutActivity.this,MusicMainActivity.class);
+				intent = new Intent(AboutActivity.this,MusicPlayActivity.class);
 				startActivity(intent);
 			}
 		});

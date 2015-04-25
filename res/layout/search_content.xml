@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFF5F5F5"
+    android:background="@drawable/second_bg"
     android:orientation="vertical" >
 
     <include layout="@layout/titlebar2" />
@@ -31,7 +31,7 @@
             android:layout_width="80dip"
             android:layout_height="40dip"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/tab_main_nav_search" >
+            android:src="@drawable/search" >
         </ImageButton>
     </LinearLayout>
 
@@ -39,6 +39,7 @@
         android:id="@+id/mainRL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/second_bg"
         android:layout_weight="1.0" >
 
         <ListView

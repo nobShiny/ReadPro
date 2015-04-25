@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/third_bg"
     android:orientation="vertical" >
 
     <include layout="@layout/titlebar3" />
@@ -13,16 +14,23 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/read_listen_box" >
 
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/mb_note" />
+
         <TextView
             android:id="@+id/rl_tv_read"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="@string/read_books"
             android:textColor="@color/black_start"
-            android:textSize="25dp"
+            android:textSize="22dp"
             android:textStyle="normal" >
         </TextView>
 
@@ -30,28 +38,34 @@
             android:layout_width="20dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="30dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/director_icon" />
     </RelativeLayout>
-
-    <RelativeLayout
+    <RelativeLayout
         android:id="@+id/rl_listen"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/read_listen_box" >
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/mb_note" />
 
         <TextView
             android:id="@+id/rl_tv_listen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="10dp"
             android:gravity="center"
             android:text="@string/listen_music"
             android:textColor="@color/black_start"
-            android:textSize="25dp"
+            android:textSize="22dp"
             android:textStyle="normal" >
         </TextView>
 
@@ -59,25 +73,24 @@
             android:layout_width="20dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="30dp"
             android:layout_marginTop="8dp"
             android:src="@drawable/director_icon" />
     </RelativeLayout>
 
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="300dp"
-        android:layout_gravity="bottom"
-        >
+        android:layout_gravity="bottom" >
 
         <ImageView
             android:id="@+id/iv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
             android:src="@drawable/baymax_all" />
-         
     </RelativeLayout>
 
 </LinearLayout>

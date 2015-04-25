@@ -76,7 +76,7 @@
                     android:layout_below="@id/ratingbar"
                     android:background="@android:drawable/editbox_background"
                     android:gravity="top"
-                    android:hint="@string/review_short_content"
+                    android:hint="添加注释"
                     android:text="" >
                 </EditText>
 

@@ -10,7 +10,7 @@
         android:id="@+id/inner_login"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF5F5F5"
+        android:background="@drawable/me_bg"
         android:paddingBottom="10dip"
         android:paddingLeft="10dip"
         android:paddingRight="10dip" >
@@ -60,7 +60,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="17dp"
                     android:minHeight="40dip"
-                    android:text="496749946@qq.com" >
+                    >
                 </EditText>
 
                 <EditText
@@ -72,7 +72,7 @@
                     android:hint="@string/password"
                     android:minHeight="40dip"
                     android:password="true"
-                    android:text="496749946" >
+                    >
                 </EditText>
 
                 <LinearLayout

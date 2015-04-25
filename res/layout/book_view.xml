@@ -27,16 +27,18 @@
                 android:id="@+id/txtInfo"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:textSize="12sp"
                 android:text="@string/bookInfo" />
 
             <RelativeLayout
-                android:id="@+id/wrapper"
+                android:id="@+id/wrapper1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtInfo"
                 android:paddingTop="10dip" >
 
                 <LinearLayout
+                    android:id="@+id/wrapper"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="horizontal" >
@@ -49,8 +51,7 @@
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                         >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/book_title"
@@ -105,6 +106,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="5dip"
                     android:background="@drawable/wp_button"
+                    android:layout_below="@id/wrapper"
                     android:text="@string/btnShowComment"
                     android:textSize="18dp"
                     android:visibility="invisible"
