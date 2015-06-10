@@ -4,6 +4,14 @@
 <resources>
 	<color name="purple_start">#9b256b</color>
 	<color name="purple_end">#5d2761</color>
+	<color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="orange">#ffff740f</color>
+    <color name="yellow">#ffe87215</color>
+    <color name="red">#ffff0000</color>
+    <color name="gray">#ff7d7d7d</color>
+    <color name="darkgray">#ff808080</color>
+    <color name="fontblack">#ff4b4b4b</color>
 
 	<!-- 427BBA, 0f93b8 -->
 	<color name="blue_start">#0f93b8</color>
@@ -28,9 +36,6 @@
 	<color name="transparent">#00000000</color>
 	<color name="titletextcolor">#ffffffff</color>
 	
-	
-	<color name="black">#000000</color>
-    <color name="white">#ffffff</color>
     <color name="trans_white">#afffffff</color>
     <color name="blue">#0000ff</color>
     <color name="divider_color">#6fffffff</color>

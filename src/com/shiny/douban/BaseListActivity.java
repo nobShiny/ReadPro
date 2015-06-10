@@ -59,13 +59,13 @@ public class BaseListActivity extends ListActivity {
 	protected void doExit() {
 		new AlertDialog.Builder(BaseListActivity.this)
 				.setTitle("提示")
-				.setMessage("您忍心就这样退出豆瓣客户端吗？")
-				.setPositiveButton("拜拜", new DialogInterface.OnClickListener() {
+				.setMessage("确认要退出伴我阅读吗？")
+				.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialoginterface, int i) {
 						finish();
 					}
 				})
-				.setNeutralButton("啊呀点错啦", new DialogInterface.OnClickListener() {
+				.setNeutralButton("取消", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface arg0, int arg1) {
 					}
 
@@ -134,7 +134,7 @@ public class BaseListActivity extends ListActivity {
 		String uid = sharedata.getString("uid", null);
 
 		// 未登录
-		if (accessToken == null || tokenSecret == null) {
+		if (accessToken == null || tokenSecret == null||"".equals(accessToken)||"".equals(tokenSecret)) {
 			return false;
 		}
 		// 已登录

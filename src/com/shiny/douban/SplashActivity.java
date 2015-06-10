@@ -96,18 +96,14 @@ public class SplashActivity extends Activity {
 			}
 		});
 		builder.setNegativeButton("取消", new OnClickListener() {
-			
-		
 			public void onClick(DialogInterface arg0, int arg1) {
 				Intent intent = new Intent(SplashActivity.this, MainTabActivity.class);
 				startActivity(intent);
 				finish();
 			}
 		});
+		builder.setCancelable(false); 
 		builder.create().show();
-		
-		
-		
 	}
 
 	//判断当前网络状态

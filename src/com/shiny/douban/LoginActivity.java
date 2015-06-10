@@ -200,10 +200,8 @@ public class LoginActivity extends BaseActivity {
 				if (message.arg1 > 0) {
 					// ±£´æaccessToken
 					Editor sharedata = getSharedPreferences("data", 0).edit();
-					sharedata
-							.putString("accessToken", NetUtil.getAccessToken());
-					sharedata
-							.putString("tokenSecret", NetUtil.getTokenSecret());
+					sharedata.putString("accessToken", NetUtil.getAccessToken());
+					sharedata.putString("tokenSecret", NetUtil.getTokenSecret());
 					sharedata.putString("uid", NetUtil.getUid());
 					sharedata.putString("email", edtEmail.getText().toString());
 					// sharedata.putString("password",edtPassword.getText().toString());

@@ -64,11 +64,11 @@ public class SearchActivity extends BaseActivity {
 	private int movieTotal; // 最大条目数
 	private int musicTotal; // 最大条目数
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
-
 		setContentView(R.layout.activity_search);
 
 		initView(R.id.search_book, R.string.book_search_hint, "book");
@@ -114,8 +114,7 @@ public class SearchActivity extends BaseActivity {
 		EditText searchText = (EditText) searchView
 				.findViewById(R.id.search_text);
 		searchText.setHint(hintId);
-		ImageButton searchButton = (ImageButton) searchView
-				.findViewById(R.id.search_button);
+		ImageButton searchButton = (ImageButton) searchView.findViewById(R.id.search_button);
 		searchView.setTag(cat);
 
 		searchButton.setOnClickListener(new OnClickListener() {

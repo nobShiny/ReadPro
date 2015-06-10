@@ -6,7 +6,6 @@ import java.util.HashMap;
 /**
  * ListÆ´Òô±È½ÏÆ÷
  * 
- * @author yuanhang
  * 
  */
 public class PinyinListComparator implements

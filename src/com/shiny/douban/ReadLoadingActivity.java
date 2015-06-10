@@ -40,9 +40,8 @@ public class ReadLoadingActivity extends Activity{
 	private boolean isLogin;
 	private SharedPreferences sp;
 	private Editor editor;
-	private Animation animation;
 //	private Reserver reserver;
-	private List<PackageInfo> packageInfos;
+//	private List<PackageInfo> packageInfos;
 //	private boolean isOK;
 	
 	@Override
@@ -76,14 +75,6 @@ public class ReadLoadingActivity extends Activity{
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_read_loading);
 		loadingGif = (GifView) findViewById(R.id.loding_gif);
-//	    setGif(); 
-//	    if (!isLogin()) {
-//			new AsyncSetApprove().execute();
-//			isLogin = false;
-//		} else {
-//			isLogin = true;
-//		}
-//	    loadingGif.setAnimation(animation);
 		if (!isLogin()) {
 			new AsyncSetApprove().execute();
 			isLogin = false;
@@ -91,32 +82,7 @@ public class ReadLoadingActivity extends Activity{
 			isLogin = true;
 			handler.sendEmptyMessage(2);
 		}
-//		animation.setAnimationListener(new AnimationListener() {
-//			@Override
-//			public void onAnimationStart(Animation arg0) {
-//			}
-//
-//			@Override
-//			public void onAnimationRepeat(Animation arg0) {
-//
-//			}
-//
-//			@Override
-//			public void onAnimationEnd(Animation arg0) {
-//				handler.sendEmptyMessage(2);
-//			}
-//		});
 	}
-//
-//	private void setGif() {
-//		// 设置Gif图片源 
-//		loadingGif.setGifImage(R.drawable.loading_gif);      
-//	    // 设置显示的大小，拉伸或者压缩 
-//		bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.loading_gif);
-//		loadingGif.setShowDimension(bitmap.getWidth(), bitmap.getHeight());
-//	    // 设置加载方式：先加载后显示、边加载边显示、只显示第一帧再显示 
-//	    loadingGif.setGifImageType(GifImageType.COVER);
-//	}
 
 	private boolean isLogin() {
 		sp = getSharedPreferences("mark", MODE_PRIVATE);
@@ -136,6 +102,7 @@ public class ReadLoadingActivity extends Activity{
 			}
 		};
 	};
+	
 	class AsyncSetApprove extends AsyncTask<String, Integer, String> {
 		@Override
 		protected String doInBackground(String... params) {
@@ -212,45 +179,37 @@ public class ReadLoadingActivity extends Activity{
 		}
 	}
 
-//	@Override
-//	protected void onDestroy() {
-//		super.onDestroy();
+
+
+//	private void getInfo() {
 //
-//		try {
-//			this.unregisterReceiver(reserver);
-//		} catch (Exception e) {
+//		// 获取系统内的所有程序信息
+//		Intent mainintent = new Intent(Intent.ACTION_MAIN, null);
+//		mainintent.addCategory(Intent.CATEGORY_LAUNCHER);
+//		packageInfos = getApplicationContext().getPackageManager()
+//				.getInstalledPackages(0);
+//
+//		int count = packageInfos.size();
+//		for (int i = 0; i < count; i++) {
+//
+//			PackageInfo pinfo = packageInfos.get(i);
+//			ApplicationInfo appInfo = pinfo.applicationInfo;
+//			if ((appInfo.flags & ApplicationInfo.FLAG_SYSTEM) > 0) {
+//				// 系统程序 忽略
+//			} else {
+//				Log.i("shiny", "page:" + pinfo.applicationInfo.packageName);
+//				if (pinfo.applicationInfo.packageName
+//						.equals("com.snda.tts.service")) {
+//					FinalDate.isTrue = true;
+//					return;
+//				} else {
+//					FinalDate.isTrue = false;
+//
+//				}
+//			}
 //		}
+//
 //	}
-
-	private void getInfo() {
-
-		// 获取系统内的所有程序信息
-		Intent mainintent = new Intent(Intent.ACTION_MAIN, null);
-		mainintent.addCategory(Intent.CATEGORY_LAUNCHER);
-		packageInfos = getApplicationContext().getPackageManager()
-				.getInstalledPackages(0);
-
-		int count = packageInfos.size();
-		for (int i = 0; i < count; i++) {
-
-			PackageInfo pinfo = packageInfos.get(i);
-			ApplicationInfo appInfo = pinfo.applicationInfo;
-			if ((appInfo.flags & ApplicationInfo.FLAG_SYSTEM) > 0) {
-				// 系统程序 忽略
-			} else {
-				Log.i("shiny", "page:" + pinfo.applicationInfo.packageName);
-				if (pinfo.applicationInfo.packageName
-						.equals("com.snda.tts.service")) {
-					FinalDate.isTrue = true;
-					return;
-				} else {
-					FinalDate.isTrue = false;
-
-				}
-			}
-		}
-
-	}
 
 	
 }

@@ -2,16 +2,22 @@ package com.shiny.douban;
 
 import com.shiny.douban.entity.Subject;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * 我的豆瓣功能view
@@ -20,7 +26,7 @@ import android.widget.TextView;
  */
 public class FavActivity extends BaseListActivity {
 	private String[] titles = new String[] { "伴我读", "伴我听",
-			"我的评论", "我的日记", "我的信息" };
+			"我的评论", "我的日记", "我的信息","图书集市" };
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -92,6 +98,10 @@ public class FavActivity extends BaseListActivity {
 			i = new Intent(this, MeActivity.class);
 			startActivity(i);
 			break;
+		case 5:
+			i = new Intent(this, com.shiny.douban.bookshop.SplashActivity.class);
+			startActivity(i);
+			break;
 		default:
 			break;
 		}
@@ -104,5 +114,7 @@ public class FavActivity extends BaseListActivity {
 		}
 		return true;
 	}
+	
+	
 
 }
